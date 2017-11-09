@@ -13,11 +13,11 @@ public class LogEvent implements RequestHandler<SNSEvent, Object> {
 
     context.getLogger().log("Invocation started: " + timeStamp);
 
-    context.getLogger().log("1: " + (request == null));
+    context.getLogger().log("Request is NULL: " + (request == null));
 
-    context.getLogger().log("2: " + (request.getRecords().size()));
+    context.getLogger().log("Number of Records: " + (request.getRecords().size()));
 
-    context.getLogger().log(request.getRecords().get(0).getSNS().getMessage());
+    context.getLogger().log("Record Message:" + request.getRecords().get(0).getSNS().getMessage());
 
     timeStamp = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss").format(Calendar.getInstance().getTime());
 
