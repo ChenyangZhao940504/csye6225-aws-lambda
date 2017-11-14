@@ -19,7 +19,9 @@ idea {
 dependencies {
     compile(
             'com.amazonaws:aws-lambda-java-core:+',
-            'com.amazonaws:aws-lambda-java-events:+'
+            'com.amazonaws:aws-lambda-java-events:+',
+            'com.amazonaws:aws-java-sdk-dynamodb:+',
+            'com.amazonaws:aws-java-sdk-ses:+'
     )
 }
 
